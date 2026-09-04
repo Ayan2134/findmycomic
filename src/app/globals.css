@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+:root {
+  --color-ink: #171412;       /* near-black backdrop, like a dim club */
+  --color-surface: #221d19;   /* card/panel surface, warm dark brown */
+  --color-surface-2: #2b2420; /* slightly raised surface */
+  --color-line: #3a322c;      /* hairline borders */
+  --color-paper: #f4efe8;     /* warm off-white text */
+  --color-muted: #b3a89c;     /* secondary text */
+  --color-marquee: #e2a33d;   /* spotlight gold */
+  --color-velvet: #b23a3a;    /* velvet red accent */
+}
+
+@theme inline {
+  --color-ink: var(--color-ink);
+  --color-surface: var(--color-surface);
+  --color-surface-2: var(--color-surface-2);
+  --color-line: var(--color-line);
+  --color-paper: var(--color-paper);
+  --color-muted: var(--color-muted);
+  --color-marquee: var(--color-marquee);
+  --color-velvet: var(--color-velvet);
+  --font-display: "Arial Narrow", "Helvetica Neue Condensed", "Roboto Condensed",
+    ui-sans-serif, system-ui, sans-serif;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-family: var(--font-sans);
+}
+
+.font-display {
+  font-family: var(--font-display);
+  font-stretch: condensed;
+  letter-spacing: -0.01em;
+}
+
+::selection {
+  background: var(--color-marquee);
+  color: var(--color-ink);
+}
